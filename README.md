@@ -11,7 +11,7 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 
 | Rank  | Behavior  | Input  | Output |
 |---|---|---|---|
-|   | Add body content (title & rules)  |   |   |
+|  1 | Add body content (title & rules)  |   |   |
 |   | Set playTo ceiling  | input by user  | saved to a variable   |
 |   | Add dynamic text to rules  | playTo  | span in rules  |
 |   | Populate players array  | playerName by user   |   |

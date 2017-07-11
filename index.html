@@ -5,9 +5,66 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
     <script src="js/scripts.js" type="text/javascript"></script>
-    <title></title>
+    <title>Pig Dice</title>
   </head>
   <body>
 
+
+    <div class="container">
+      <h1>Pig Dice</h1>
+      <p>
+      Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
+      <ul>
+        <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+        <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+        <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
+        <li>The first player to score <span id="playTo"></span> or more points wins.</li>
+      </ul>
+
+      For example, the first player, Ann, begins a turn with a roll of 5. Ann could hold and score 5 points, but chooses to roll again. Ann rolls a 2, and could hold with a turn total of 7 points, but chooses to roll again. Ann rolls a 1, and must end her turn without scoring. The next player, Bob, rolls the sequence 4-5-3-5-5, after which he chooses to hold, and adds his turn total of 22 points to his score.
+      </p>
+      <div class="setup">
+        <div class="userInputs">
+          <form>
+            <div class="form-group">
+              <label for="Player.name">Player Name</label>
+              <input type="text" placeholder="Bart Simpson" maxlength="30" size="30">
+            </div>
+            <div class="form-group">
+              <label for="Game.playTo">Set Winning Score</label>
+              <input type="number" value="0">
+            </div>
+            <button class="btn" id="addPlayer" type="button">Add Player</button>
+            <button class="btn" id="startGame" type="submit">Start Game</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="gamePlay">
+        <div class="row">
+          <div id="activePlayer"  class="col-md-6">
+            <h2><span class="activePlayer"></span></h2>
+            <p>You rolled <span id="rollDiceResult"></span></p>
+            <br>
+            <button class="btn" type="button" id="rollDice">Roll!</button>
+            <button class="btn" type="button" id="holdYourRoll">Hold your Roll!</button>
+          </div>
+          <div id="inactivePlayers" class="col-md-6">
+            <h2>Player Que</h2>
+            <ul></ul>
+          </div>
+        </div>
+        <button class="btn" type="button" id="resetGame">Weak Sauce :-(</button>
+      </div>
+
+      <div class="gameWon">
+        <p> You won <span id="activePlayer"></span>!
+        Ya'll LOST!
+        <ul>
+
+        </ul>
+        </p>
+      </div>
+    </div>
   </body>
 </html>

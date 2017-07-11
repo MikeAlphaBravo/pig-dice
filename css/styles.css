@@ -1,0 +1,11 @@
+#holdYourRoll, #startGame {
+  margin-left: 20px;
+}
+
+#resetGame {
+  margin-top: 35px;
+}
+
+.gameWon {
+  display: none;
+}
