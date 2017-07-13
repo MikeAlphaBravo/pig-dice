@@ -12,8 +12,9 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 | Rank  | Behavior  | Input  | Output |
 |---|---|---|---|
 |  1 | Add body content (title & rules)  |   |   |
-|   | Set playTo ceiling  | input by user  | saved to a variable   |
-|   | Add dynamic text to rules  | playTo  | span in rules  |
+|  2 | Set playTo ceiling  | input by user  | saved to a variable   |
+| 3  | Add dynamic text to rules  | playTo  | span in rules  |
+| 4  | append inputs to HTML for additional players  | playerName by user   |   |
 |   | Populate players array  | playerName by user   |   |
 |   | Set who's turnt it be  |   |   |
 |   | Pass inputted player name to players  |   |   |
