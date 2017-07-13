@@ -15,7 +15,12 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 |  2 | Set playTo ceiling  | input by user  | saved to a variable   |
 | 3  | Add dynamic text to rules  | playTo  | span in rules  |
 | 4  | append inputs to HTML for additional players  | playerName by user   |   |
-|   | Populate players array  | playerName by user   |   |
+| 5  | Set player  |  input by user |  saved to variable |
+|   |   |   |   |
+
+
+
+<!-- |   | Populate players array  | playerName by user   |   | -->
 |   | Set who's turnt it be  |   |   |
 |   | Pass inputted player name to players  |   |   |
 |   | Add players  |   |   |

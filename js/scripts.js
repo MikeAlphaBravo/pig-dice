@@ -16,19 +16,20 @@ function Player(name, turnScore, totalScore, holdScore, currentTurnRoll) {
 
 
 //startGame
-var startGame = (function(playToInput) {
+var startGame = (function(inputtedPlayTo, inputtedPlayerName) {
   console.log("execute startGame");
-  $("#playToSpan").text(playToInput);
+  $("#playToSpan").text(inputtedPlayTo);
+  $(".activePlayer").text(inputtedPlayerName);
 });
-//addPlayer
-function addPlayer() {
-  $("#addPlayer").append('<div id="addPlayer" class="form-group">' +
-    '<label for="Player.name">Player Name</label>' +
-    '<input type="text" placeholder="Bart Simpson" maxlength="30" size="30">' +
-  '</div>');
-}
+//addPlayer disabled until single player functionality
+// function addPlayer() {
+//   $("#addPlayer").append('<div id="addPlayer" class="form-group">' +
+//     '<label for="Player.name">Player Name</label>' +
+//     '<input type="text" placeholder="Bart Simpson" maxlength="30" size="30">' +
+//   '</div>');
+// }
 //newGame
-function newGame() {
+function createGame() {
   var inputted
 }
 
@@ -37,14 +38,15 @@ function newGame() {
 
 //front-end
 $(document).ready(function() {
-  $("#addPlayerBtn").click(function() {
-    addPlayer();
-  });
+  // $("#addPlayerBtn").click(function() {
+  //   addPlayer();
+  // });
 
   $(".userInputs form").submit(function(event) {
     event.preventDefault();
 
-    var playToInput = $("input#playTo").val();
-    startGame(playToInput);
+    var inputtedPlayTo = $("input#playTo").val();
+    var inputtedPlayerName = $("input#playerName").val();
+    startGame(inputtedPlayTo, inputtedPlayerName);
   });
 });
