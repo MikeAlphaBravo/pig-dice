@@ -16,23 +16,23 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 | 3  | Add dynamic text to rules  | playTo  | span in rules  |
 | 4  | append inputs to HTML for additional players  | playerName by user   |   |
 | 5  | Set player  |  input by user |  saved to variable |
+| 6  | Display playerName  |   |   |
+|  7 | Hide game setup  |   |   |
+| 8  | Show game play  |   |   |
+|  9 | Allow player to roll die  |   |   |
+|  10 | Display roll results  |   |   |
+|  11 |  calculate turn score |   |   |
+| 12  |  calculate holdScore |   |   |
 |   |   |   |   |
 
 
 
 <!-- |   | Populate players array  | playerName by user   |   | -->
 |   | Set who's turnt it be  |   |   |
-|   | Pass inputted player name to players  |   |   |
-|   | Add players  |   |   |
-|   | Start Game  |   |   |
-|   | Hide game setup  |   |   |
-|   | Show game play  |   |   |
-|   | Display playerName  |   |   |
+<!-- |   | Add players  |   |   | -->
 |   | Display currentPlayer total score  |   |   |
 |   | Display currentPlayer turn score  |   |   |
 |   | Display inactive player names w/totalScore  |   |   |
-|   | Allow player to roll die  |   |   |
-|   | Display roll results  |   |   |
 |   | Determine if "pig-out" (rolling 1)  | 1  | Who's turn? += 1 (next in array)  |
 |   | Determine if game won  | currentPlayer totalScore >= game.playTo | YOU WIN!  |
 |   | Allow player to hold turn | Hold button click | totalScore += turnScore  |

@@ -1,4 +1,9 @@
 //Back-end
+var roll;
+var totalScore;
+var turnScore = 0;
+
+
 var newGame;
 function Game(players, playTo, whoseTurn) {
   this.players = [];
@@ -17,9 +22,11 @@ function Player(name, turnScore, totalScore, holdScore, currentTurnRoll) {
 
 //startGame
 var startGame = (function(inputtedPlayTo, inputtedPlayerName) {
-  console.log("execute startGame");
   $("#playToSpan").text(inputtedPlayTo);
   $(".activePlayer").text(inputtedPlayerName);
+  $(".gameSetup").hide();
+  $(".gamePlay").show();
+
 });
 //addPlayer disabled until single player functionality
 // function addPlayer() {
@@ -33,6 +40,19 @@ function createGame() {
   var inputted
 }
 
+//rollDice
+var rollDice = (function(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  roll = Math.floor(Math.random() * (max - min + 1)) + min;
+  // console.log(roll);
+  $("#rollDiceResult").text(roll)
+  //toberefactoredintoobject
+  turnScore += roll
+  console.log(turnScore);
+  var holdScore = (turnScore + totalScore);
+});
+
 
 
 
@@ -41,6 +61,10 @@ $(document).ready(function() {
   // $("#addPlayerBtn").click(function() {
   //   addPlayer();
   // });
+
+  $("#rollDice").click(function() {
+    rollDice(1,6);
+  });
 
   $(".userInputs form").submit(function(event) {
     event.preventDefault();

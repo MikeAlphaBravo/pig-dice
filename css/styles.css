@@ -6,6 +6,6 @@
   margin-top: 35px;
 }
 
-.gameWon {
+.gameWon, .gamePlay {
   display: none;
 }
